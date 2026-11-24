@@ -2,7 +2,7 @@
 
 《明日方舟》「卫戍协议」非官方自动化工具。自动进行「极速模拟」与「独立模拟·规程等级1」，获取策略金标、彩标和蚀刻章。
 
-本项目部分游戏界面行为参考 [GarrisonFarm](https://github.com/UnknownGlyph/GarrisonFarm) 及优化版 [GarrisonFarm-Personal](https://github.com/FJH3576/GarrisonFarm-Personal) 已实现的功能，重新设计架构、独立编写代码，不包含原项目的源代码文件、bat 或二进制内容。部分游戏界面坐标（如商店卡位、出售区、拖拽停放点）与少量颜色阈值参考了原项目中的数值，并在实机截图上重新测量核对。许可证为 [GPL-3.0-or-later](LICENSE)，见文末「许可证」。
+本项目部分游戏界面行为参考 [GarrisonFarm](https://github.com/UnknownGlyph/GarrisonFarm) 及优化版 [GarrisonFarm-Personal](https://github.com/FJH3576/GarrisonFarm-Personal) 已实现的功能，重新设计架构、独立编写代码，不包含原项目的源代码文件、bat 或二进制内容。部分游戏界面坐标（如商店卡位、出售区、拖拽停放点）与少量颜色阈值参考了原项目中的数值，并在实机截图上重新测量核对。`autostronghold/game/rules.py` 移植了 [Stronghold-Protocol](https://github.com/sganggs/Stronghold-Protocol)（GPL-3.0-or-later）的规则代码。许可证为 [GPL-3.0-or-later](LICENSE)，见文末「许可证」。
 
 ## 功能
 
@@ -128,7 +128,7 @@ powershell -ExecutionPolicy Bypass -File packaging\build.ps1    # 生成 dist\Au
 
 本项目以 **GNU General Public License v3.0 或更高版本（GPL-3.0-or-later）** 发布，全文见 [LICENSE](LICENSE)。
 
-选择理由：本项目是只在本机运行的程序，不需要 AGPL-3.0 针对网络服务的额外条款；`autostronghold/game/rules.py` 移植了 Stronghold-Protocol（GPL-3.0-or-later）的规则代码，整体须与之兼容，GPL-3.0-or-later 正好满足，也让衍生版本保持开源。
+选择理由：本项目是只在本机运行的程序，不需要 AGPL-3.0 针对网络服务的额外条款；`autostronghold/game/rules.py` 移植了 [Stronghold-Protocol](https://github.com/sganggs/Stronghold-Protocol)（GPL-3.0-or-later）的规则代码，整体须与之兼容，GPL-3.0-or-later 正好满足，也让衍生版本保持开源。
 
 本项目使用的第三方组件（MaaFramework、RapidOCR、PaddleOCR 模型、ONNX Runtime、OpenCV 等）适用各自的许可证，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)；发布包的 `_internal\licenses` 文件夹包含本项目的 LICENSE、THIRD_PARTY_NOTICES.md 与它们的许可证原文。
 
