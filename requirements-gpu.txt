@@ -1,0 +1,13 @@
+# GPU (DirectML) build. rapidocr-onnxruntime pulls the CPU onnxruntime, so install it
+# separately with --no-deps:  python -m pip install --no-deps rapidocr-onnxruntime==1.4.4
+numpy>=1.26,<3
+opencv-python>=4.10,<5
+onnxruntime-directml>=1.19,<2
+pyclipper
+shapely
+PyYAML
+six
+Pillow
+tqdm
+maafw==5.16.1
+pyinstaller==6.21.0

@@ -1,0 +1,133 @@
+{
+  "_comment": [
+    "独立模拟·规程等级2~20 strategy (autostronghold/tactics/sp3/independent_clear.py).",
+    "base: parameters of every group; groups: overrides per level group (2-4, 5-8, 9-14, 15-20); levels: overrides for one level.",
+    "Keys as in sp3_fast.json. Derived on the simulator (sweeps c*): goal = highest clear rate; hidden round when it opens.",
+    "Evidence: docs/SP3-无模型策略-证据与评测.md."
+  ],
+  "data_version": "act3autochess@V3_1",
+  "base": {
+    "level_plan": {
+      "1": 1,
+      "2": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6
+    },
+    "min_field": {
+      "1": 2,
+      "2": 3,
+      "3": 4,
+      "4": 5,
+      "5": 6,
+      "6": 7,
+      "7": 8
+    },
+    "tier_power": [
+      0,
+      10,
+      14,
+      19,
+      25,
+      32,
+      40
+    ],
+    "elite_mul": 2.2,
+    "bond_weights": {
+      "精准": 30,
+      "奥术": 20,
+      "坚守": 9,
+      "助力": 11,
+      "聚合": 8,
+      "协防干员": 9,
+      "不屈": 6,
+      "迅捷": 5,
+      "远见": 4,
+      "奇迹": 3
+    },
+    "season_weight": 10,
+    "other_weight": 4,
+    "bond_prospect": 0.25,
+    "medic_weight": 0,
+    "medic_max": 1,
+    "melee_min": 3,
+    "melee_weight": 10,
+    "merge_share": [
+      0,
+      0.35,
+      0.8
+    ],
+    "buy_min": 4,
+    "replace_margin": 8,
+    "bench_keep": 7,
+    "refresh_budget": {
+      "1": 0,
+      "5": 1,
+      "7": 2
+    },
+    "final_sell_bench": true,
+    "option_index": 1
+  },
+  "groups": {
+    "2-4": {
+      "_why": "模拟器中与规程等级1相同（FUNNY、战场#01、无隐藏轮）：沿用已验证的数值，领袖轮出售整备区换战力"
+    },
+    "5-8": {
+      "_why": "c3（规程等级5，种子1-20×3）：刷新预算加大 48.3%，再加医疗权重 55.0%（基础 33.3%）",
+      "refresh_budget": {
+        "1": 0,
+        "3": 1,
+        "5": 2,
+        "7": 3,
+        "9": 5,
+        "11": 8
+      },
+      "medic_weight": 18
+    },
+    "9-14": {
+      "_why": "c4（规程等级9）：刷新+医疗+合成/精锐权重 21.7%（基础 11.7%）；s2（规程等级9，无自选编队）：较慢的商店等级计划 43.3%（30.0%），留出集 18.5%（14.4%，配对检验 z=3.18）",
+      "level_plan": {
+        "1": 1,
+        "3": 2,
+        "4": 3,
+        "6": 4,
+        "8": 5,
+        "10": 6
+      },
+      "refresh_budget": {
+        "1": 0,
+        "3": 1,
+        "5": 2,
+        "7": 3,
+        "9": 5,
+        "11": 8
+      },
+      "medic_weight": 18,
+      "merge_share": [
+        0,
+        0.7,
+        1.4
+      ],
+      "elite_mul": 3
+    },
+    "15-20": {
+      "_why": "c2/c4/s1~s3（规程等级15）：所有可执行变体 0~3%；沿用 9-14 组 c4 数值（不含其较慢的等级计划：留出集通关率同为 0.1%，只把失败推迟约 1 回合），未找到有效打法（见证据文档 §9）",
+      "refresh_budget": {
+        "1": 0,
+        "3": 1,
+        "5": 2,
+        "7": 3,
+        "9": 5,
+        "11": 8
+      },
+      "medic_weight": 18,
+      "merge_share": [
+        0,
+        0.7,
+        1.4
+      ],
+      "elite_mul": 3
+    }
+  },
+  "levels": {}
+}

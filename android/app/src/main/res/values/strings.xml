@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutoStronghold</string>
+    <string name="touch_service_label">AutoStronghold 触控</string>
+    <string name="touch_service_description">在「卫戍协议」中代替手指点击和拖动（购买、部署干员等）。只执行手势，不读取任何界面内容。</string>
+</resources>

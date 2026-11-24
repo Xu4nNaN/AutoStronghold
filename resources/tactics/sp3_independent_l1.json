@@ -1,0 +1,68 @@
+{
+  "_comment": [
+    "独立模拟·规程等级1 strategy (autostronghold/tactics/sp3/independent_l1.py). Same keys as sp3_fast.json;",
+    "derived on the simulator (sweeps i1, i2): goal = shortest game at a win rate that stays at 100 % in the derivation and hold-out seeds.",
+    "Evidence: docs/SP3-无模型策略-证据与评测.md."
+  ],
+  "data_version": "act3autochess@V3_1",
+  "level_plan": {
+    "1": 1,
+    "2": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6
+  },
+  "min_field": {
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 5,
+    "5": 6,
+    "6": 7,
+    "7": 8
+  },
+  "tier_power": [
+    0,
+    10,
+    14,
+    19,
+    25,
+    32,
+    40
+  ],
+  "elite_mul": 2.2,
+  "bond_weights": {
+    "精准": 30,
+    "奥术": 20,
+    "坚守": 9,
+    "助力": 11,
+    "聚合": 8,
+    "协防干员": 9,
+    "不屈": 6,
+    "迅捷": 5,
+    "远见": 4,
+    "奇迹": 3
+  },
+  "season_weight": 10,
+  "other_weight": 4,
+  "bond_prospect": 0.25,
+  "medic_weight": 0,
+  "medic_max": 1,
+  "melee_min": 3,
+  "melee_weight": 10,
+  "merge_share": [
+    0,
+    0.35,
+    0.8
+  ],
+  "buy_min": 4,
+  "replace_margin": 8,
+  "bench_keep": 7,
+  "refresh_budget": {
+    "1": 0,
+    "5": 1,
+    "7": 2
+  },
+  "final_sell_bench": false,
+  "option_index": 1
+}

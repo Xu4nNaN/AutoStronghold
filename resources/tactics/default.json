@@ -1,0 +1,111 @@
+{
+  "_comment": [
+    "Parameters of the default tactic 叠层优先 (trait stacking). Edit <program folder>/tactics/default.json to override.",
+    "trait_weights: value of each stacking trait (精准 > 奥术 > 远见). composition: wanted field count per trait;",
+    "below the target a trait counts below_target_factor x weight, above it over_target_factor x weight; 远见 has no target and always counts fully.",
+    "medics / medic_count / medic_bonus: one medic wanted on the field. duplicate_bonus[n]: value when n copies are owned (3 merge into an elite); for 1-cost operators it is multiplied by cheap_merge_factor, and cost_bonus adds value by cost.",
+    "Shop levels: from upgrade_from_round the shop is levelled straight to buy_first_level. From that level on operators are bought first; the shop goes up one level when the field (distinct operators) reaches any lineup in level_up_lineups for the current level, or after level_up_after_rounds rounds of buying at that level.",
+    "tier_value: small tie-breaker by tier. min_field_by_round: operators wanted on the field from that round on, bought before shop upgrades.",
+    "bench_keep: when the bench (整备区, 10 slots) is full, sell down to this many. sell_trait_order / foresight_first_over: see the selling rules in README.",
+    "ranged: name fragments that take the wooden-frame (safe) cells first; medics and 精准 operators do too.",
+    "sell_for_funds_max / sell_for_funds_margin: sell up to this many bench operators (no duplicates) to afford a card worth at least the margin more than the best affordable one."
+  ],
+  "opening_buys": 2,
+  "upgrade_from_round": 2,
+  "buy_first_level": 3,
+  "level_up_lineups": {
+    "3": [{"精准": 2}, {"精准": 1, "奥术": 1}],
+    "4": [{"精准": 3, "奥术": 1}, {"精准": 2, "奥术": 2}],
+    "5": [{"精准": 3, "奥术": 2}, {"精准": 2, "奥术": 3}]
+  },
+  "level_up_after_rounds": 2,
+  "min_field_by_round": {
+    "2": 3,
+    "3": 4,
+    "4": 5,
+    "5": 6,
+    "6": 7,
+    "7": 8
+  },
+  "min_value_when_maxed": 30,
+  "replace_margin": 15,
+  "max_refresh_per_round": 8,
+  "refresh_reserve": 0,
+  "trait_weights": {
+    "精准": 30,
+    "奥术": 24,
+    "远见": 18
+  },
+  "composition": {
+    "精准": 3,
+    "奥术": 2
+  },
+  "below_target_factor": 1.6,
+  "over_target_factor": 0.4,
+  "medics": [
+    "褐果",
+    "莎草",
+    "哈洛德",
+    "瑰盐",
+    "乌啾",
+    "风絮",
+    "流明",
+    "夜莺",
+    "华法琳",
+    "纯烬艾雅法拉",
+    "Mon3tr",
+    "Touch"
+  ],
+  "medic_count": 1,
+  "medic_bonus": 35,
+  "duplicate_bonus": [
+    0,
+    12,
+    30
+  ],
+  "cost_bonus": {
+    "1": 14
+  },
+  "cheap_merge_factor": 1.5,
+  "sell_for_funds_max": 2,
+  "sell_for_funds_margin": 10,
+  "tier_value": {
+    "0": 6,
+    "1": 4,
+    "2": 6,
+    "3": 9,
+    "4": 12,
+    "5": 16,
+    "6": 20
+  },
+  "priority": {},
+  "bench_keep": 8,
+  "sell_trait_order": [
+    "迅捷",
+    "奥术",
+    "精准",
+    "远见"
+  ],
+  "foresight_first_over": 2,
+  "ranged": [
+    "鸿雪",
+    "初雪",
+    "逻各斯",
+    "蕾缪安",
+    "真言",
+    "迷迭香",
+    "空弦",
+    "星源",
+    "卡达",
+    "灰喉",
+    "黑键",
+    "远牙",
+    "霍尔海雅",
+    "维什戴尔",
+    "能天使",
+    "望",
+    "艾雅法拉",
+    "寒檀",
+    "妮芙"
+  ]
+}
